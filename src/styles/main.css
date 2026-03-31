@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
-  background: #f3ede7;
+  background: #cfcfcf;
   color: #000;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ h1, h2, h3, p {
   min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
-  background: #f3ede7;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -178,21 +178,13 @@ h1, h2, h3, p {
   /* font-family: 'Montserrat', Arial, sans-serif; */
 }
 
-.guests-section .calendar img {
-  width: 100%;
-  max-width: 100px;
-  border-radius: 10px;
-  margin: 10px 4px 0 0;
-}
-
-
 /* Place section */
 
 .place-section {
   background: #fff;
   border-radius: 0;
   box-shadow: none;
-  padding: 0 16px;
+  padding: 0 16px 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,6 +205,7 @@ h1, h2, h3, p {
 
 .place-section .address {
   text-align: center;
+  margin-top: 16px;
 }
 
 .place, .dress-code, .gifts, .guest-form, .contacts, .footer {
@@ -230,37 +223,56 @@ h1, h2, h3, p {
 }
 
 .map-btn {
-  background: #a68c6d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 28px;
+  background: #fff;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 28px;
+  padding: 12px 52px;
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 24px;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
   font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
 }
 
 .map-btn:hover {
-  background: #8d7357;
+  /* background: #000;
+  color: #fff; */
   transform: translateY(-2px) scale(1.04);
 }
 
 
-.section-title {
+
+/* Program section */
+.program-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  margin-top: 0;
+}
+
+.program-section .title {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 48px;
+  font-size: 42px;
   color: #000;
+  margin-top: 24px;
 }
 
-.guests-section-text {
-  text-align: center;
+.program-section .plan-image {
+  width: 100%;
+  margin-top: 24px;
 }
 
-.program-list {
+/* .program-list {
   list-style: none;
   padding: 0;
   margin: 0 0 18px 0;
@@ -280,54 +292,119 @@ h1, h2, h3, p {
   color: #a68c6d;
   min-width: 48px;
   display: inline-block;
-}
+} */
 
-.dress-code h3,
-.gifts h3 {
-  font-family: 'Marck Script', cursive;
-  font-size: 3.3rem;
-  color: #a68c6d;
-  margin: 14px 0 6px 0;
-}
-
-.dress-code .colors {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 10px 0 14px 0;
-}
-
-.dress-code .color {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid #e5d8c7;
-  display: inline-block;
-}
-
-.dress-images img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 10px;
-  margin: 8px 0;
-}
-
-.gifts {
-  margin-top: 18px;
-  width: 100%;
+/* dress code section */
+.dress-code-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  /* margin-top: 22px; */
 }
 
-.gift-item {
+.dress-code-section .title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #000;
+  margin-top: 24px;
+}
+
+.dress-code-section .wrapper {
+  margin-top: 16px;
+}
+
+.dress-code-section .description {
+  text-align: center;
+  color: rgba(223, 147, 131, 1);
+}
+
+.dress-code-section .colors-text {
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+.dress-code-section .colors-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.dress-code-section .colors-dots span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-left: -24px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
+}
+
+.dress-code-section .colors-dots:first-child {
+  margin-left: 0;
+}
+
+.dress-code-section .colors-dots .dot1 { 
+  background:rgba(251, 206, 182, 1);
+  margin-left: 14px;
+  z-index: 1; 
+}
+.dress-code-section .colors-dots .dot2 { 
+  background: rgba(223, 147, 131, 1);
+   z-index: 2; 
+}
+.dress-code-section .colors-dots .dot3 { 
+  background: rgba(239, 223, 223, 1);
+   z-index: 3; 
+}
+.dress-code-section .colors-dots .dot4 { 
+  background: rgba(247, 181, 196, 1);
+   z-index: 4; 
+}
+.dress-code-section .colors-dots .dot5 { 
+  background: rgba(151, 112, 62, 1);
+  z-index: 5;
+}
+
+/* gifts section */
+
+.gifts-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  /* margin-top: 22px; */
+}
+
+.gifts-section .title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #000;
+  margin-top: 24px;
+}
+
+
+.gifts-section .gift-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   margin-top: 16px;
-  padding: 0 18px;
 }
 
 .gift-icon {
@@ -336,44 +413,45 @@ h1, h2, h3, p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: #a68c6d;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 1.2rem;
 }
 
-.gift-item p {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.6;
+.gifts-section .gift-text {
+  text-align: center;
 }
 
-.guest-form h2 {
-  font-size: 1.15rem;
-  color: #a68c6d;
-  margin-bottom: 8px;
+
+/* contacts section */
+
+.contacts-section {
+  background: rgba(250, 249, 249, 1);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  /* margin-top: 22px; */
 }
 
-.guest-form p {
-  font-size: 0.98rem;
-  margin-bottom: 10px;
+.contacts-section .title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #000;
+  margin-top: 24px;
 }
 
-.form-btn {
-  background: #a68c6d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 28px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  font-family: 'Montserrat', Arial, sans-serif;
+.contacts-section .description {
+  text-align: center;
+  margin-top: 24px;
 }
 
-.form-btn:hover {
-  background: #8d7357;
-  transform: translateY(-2px) scale(1.04);
+.contacts-section .phone {
+  text-align: center;
+  margin-top: 8px;
 }
 
 .contacts h3 {
@@ -423,6 +501,12 @@ h1, h2, h3, p {
   font-size: 1rem;
   box-shadow: 0 1px 6px rgba(180,160,120,0.07);
 }
+
+.calendar-divider {
+  margin-top: 60px;
+  max-width: 100%;
+}
+
 .calendar-table th,
 .calendar-table td {
   width: 32px;
