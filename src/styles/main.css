@@ -1,0 +1,536 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  background: #f3ede7;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.invite-wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f3ede7;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* main photo section */
+.base-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.base-section > * {
+  width: 100%;
+}
+
+.photo-block {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 30, 30, 0.43));
+  pointer-events: none;
+}
+
+.main-photo {
+  width: 100%;
+  height: 618px;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+
+.photo-arrow {
+  position: absolute;
+  top: 508px;
+  left: 334px;
+  width: 9px;
+  height: 88px;
+  opacity: 1;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.photo-arrow-secondary {
+  position: absolute;
+  top: 22px;
+  left: 334px;
+  width: 9px;
+  height: 88px;
+  opacity: 1;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.date-overlay {
+  position: absolute;
+  top: 48px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.date-overlay span {
+  display: block;
+}
+
+.names {
+  position: absolute;
+  color: #fff;
+  text-align: left;
+
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 100%;
+
+  width: 350px;
+  height: 28px;
+  top: 542px;
+  left: 16px;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* guests section */
+
+.guests-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  margin-top: 0;
+}
+
+.guests-section .title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #000;
+  margin-top: 38px;
+  margin-bottom: 24px;
+}
+
+.guests-section .invite-text {
+  margin-top: 0;
+  text-align: center;
+}
+
+.guests-section .date {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-weight: 400;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.guests-section .calendar-title {
+  color: #000;
+  font-size: 20px;
+  /* font-family: 'Montserrat', Arial, sans-serif; */
+}
+
+.guests-section .calendar img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 10px;
+  margin: 10px 4px 0 0;
+}
+
+
+/* Place section */
+
+.place-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  animation: fadeInUp 1s;
+  margin-top: 0;
+}
+
+
+.place-section .title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 42px;
+  color: #000;
+  margin-top: 64px;
+}
+
+.place-section .address {
+  text-align: center;
+}
+
+.place, .dress-code, .gifts, .guest-form, .contacts, .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.place h3 {
+  margin: 10px 0 4px 0;
+  font-family: 'Marck Script', cursive;
+  font-size: 3.3rem;
+  color: #a68c6d;
+}
+
+.map-btn {
+  background: #a68c6d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.map-btn:hover {
+  background: #8d7357;
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+.section-title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #000;
+}
+
+.guests-section-text {
+  text-align: center;
+}
+
+.program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  width: 100%;
+}
+
+.program-list li {
+  font-size: 1.05rem;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.program-list span {
+  font-weight: bold;
+  color: #a68c6d;
+  min-width: 48px;
+  display: inline-block;
+}
+
+.dress-code h3,
+.gifts h3 {
+  font-family: 'Marck Script', cursive;
+  font-size: 3.3rem;
+  color: #a68c6d;
+  margin: 14px 0 6px 0;
+}
+
+.dress-code .colors {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0 14px 0;
+}
+
+.dress-code .color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5d8c7;
+  display: inline-block;
+}
+
+.dress-images img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.gifts {
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gift-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 0 18px;
+}
+
+.gift-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #a68c6d;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.gift-item p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.guest-form h2 {
+  font-size: 1.15rem;
+  color: #a68c6d;
+  margin-bottom: 8px;
+}
+
+.guest-form p {
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+}
+
+.form-btn {
+  background: #a68c6d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.form-btn:hover {
+  background: #8d7357;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.contacts h3 {
+  font-family: 'Marck Script', cursive;
+  font-size: 3.3rem;
+  color: #a68c6d;
+  margin: 18px 0 4px 0;
+}
+
+.contacts .phone {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 1rem;
+  color: #a68c6d;
+}
+
+.footer img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.calendar {
+  margin: 24px 16px 0 16px;
+  text-align: center;
+}
+.calendar-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a68c6d;
+  margin-bottom: 6px;
+}
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f3ede7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 1rem;
+  box-shadow: 0 1px 6px rgba(180,160,120,0.07);
+}
+.calendar-table th,
+.calendar-table td {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding: 2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #5a4633;
+}
+.calendar-table th {
+  color: #b7a89e;
+  font-weight: 500;
+  font-size: 0.95em;
+  background: #f9f6f2;
+}
+.calendar-table td {
+  background: #fff;
+  border-radius: 6px;padding: 0 16px;
+  transition: background 0.2s;
+}
+.calendar-heart {
+  background: #ffe6e6 !important;
+  color: #a68c6d;
+  font-weight: bold;
+  position: relative;
+}
+
+.place-carousel {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(166, 140, 109, 0.18);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 300%;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #a68c6d;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.carousel-button:hover {
+  background: #8d7357;
+  transform: translateY(-2px);
+}
+.calendar-heart .heart {
+  color: #e57373;
+  font-size: 1.1em;
+  margin-left: 2px;
+  vertical-align: middle;
+  font-family: inherit;
+}
+
+@media (max-width: 600px) {
+  .invite-wrapper {
+    padding: 4px 0;
+  }
+  .base-section {
+    padding: 12px 4px;
+  }
+  .photo-block {
+    max-width: 100%;
+  }
+  .dress-images img,
+  .calendar img,
+  .place-photos img,
+  .footer img {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
