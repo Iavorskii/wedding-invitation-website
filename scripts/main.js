@@ -79,9 +79,8 @@ track.addEventListener('touchend', (e) => {
   const endX = e.changedTouches[0].clientX;
   const diff = startX - endX;
 
-  // Порог срабатывания свайпа — 50px
-  if (diff > 50) goTo(current + 1);
-  if (diff < -50) goTo(current - 1);
+  if (diff > 50) goNext();
+  if (diff < -50) goPrev();
 });
 
   updateCarousel();
