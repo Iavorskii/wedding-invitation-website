@@ -1,3 +1,17 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
@@ -11,6 +25,20 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+p, h2, h3, blockquote, hr {
+  /* animation-name: text-appear; @keyframes defined below */
+  /* animation-timing-function: ease-in; standard should be linear */
+  /* animation-fill-mode: both; keeps animated values forwards and backwards */
+  animation: text-appear ease-in both;
+  animation-timeline: view(); /* applies animation state relative to viewport */
+  animation-range: 0vh 70vh; /* set 0% and 100% positions */
+}
+
+img {
+  animation: image-appear ease-in both;
+  animation-timeline: view();
+  animation-range: entry 50% 100vh;
+}
 .invite-wrapper {
   max-width: 375px;
   margin: 0 auto;
@@ -67,6 +95,8 @@ h1, h2, h3, p {
   margin: 0;
   max-width: 100%;
   padding: 0;
+
+
 }
 
 .photo-arrow {
@@ -234,6 +264,8 @@ h1, h2, h3, p {
   transition: background 0.2s, transform 0.2s;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 700;
+
+  text-decoration: none;
 }
 
 .map-btn:hover {
@@ -408,8 +440,8 @@ h1, h2, h3, p {
 }
 
 .gift-icon {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -432,7 +464,8 @@ h1, h2, h3, p {
   align-items: center;
   min-width: 0;
   animation: fadeInUp 1s;
-  /* margin-top: 22px; */
+
+
 }
 
 .contacts-section .title {
@@ -542,13 +575,12 @@ h1, h2, h3, p {
 .carousel-wrapper {
   overflow: hidden;
   border-radius: 12px;
-  border: 1px solid rgba(166, 140, 109, 0.18);
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.4s ease;
-  width: 300%;
+  transition: transform 0.5s ease;
 }
 
 .carousel-slide {
@@ -556,32 +588,54 @@ h1, h2, h3, p {
   height: 300px;
   flex-shrink: 0;
   object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   display: block;
+  border-radius: 12px;
 }
 
 .carousel-controls {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
+  justify-content: space-between;  /* кнопки по краям */
+  align-items: center;
+  padding: 0 4px;  /* небольшой отступ от краёв */
+  position: absolute;
+  top: 40%;
+  width: 100%;
 }
 
+
+
 .carousel-button {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border: none;
-  background: #a68c6d;
-  color: #fff;
-  border-radius: 50%;
+  border-radius: 8px;
+  background: #fff;
   cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.2s, background 0.2s;
+
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 1.2rem;
+  font-weight: 300;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; */
 }
 
 .carousel-button:hover {
-  background: #8d7357;
-  transform: translateY(-2px);
+  /* background: #000; */
+  /* color: #fff; */
+  /* transform: translateY(-2px); */
 }
+
+.button-arrow-left {
+  transform: rotate(180deg);
+}
+
 .calendar-heart .heart {
   color: #e57373;
   font-size: 1.1em;

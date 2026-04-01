@@ -10,6 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/usadba_new_1.jpg">
+  <link rel="preload" as="image" href="assets/img/usadba_new_2.png">
+  <link rel="preload" as="image" href="assets/img/usadba_new_3.jpg">
+  <link rel="preload" as="image" href="assets/img/usadba_new_4.jpg">
+  <link rel="preload" as="image" href="assets/img/usadba_new_5.png">
 </head>
 <body>
   <div class="invite-wrapper">
@@ -85,19 +90,33 @@
         <br /> станица Ольгинская
         <br/>Царский зал
       </p>
-      <div class="place-carousel">
+      <div class="place-carousel" aria-label="Фотогалерея усадьбы">
         <div class="carousel-wrapper">
           <div class="carousel-track">
-            <img src="https://placehold.co/500x300" alt="Усадьба 1" class="carousel-slide" />
-            <img src="https://placehold.co/500x300" alt="Усадьба 2" class="carousel-slide" />
+            <img src="assets/img/usadba_new_1.jpg" alt="Вид усадьбы 1" class="carousel-slide" loading="eager" fetchpriority="high" />
+            <img src="assets/img/usadba_new_2.png" alt="Вид усадьбы 2" class="carousel-slide" loading="lazy" />
+            <img src="assets/img/usadba_new_3.jpg" alt="Вид усадьбы 3" class="carousel-slide" loading="lazy" />
+            <img src="assets/img/usadba_new_4.jpg" alt="Вид усадьбы 4" class="carousel-slide" loading="lazy" />
+            <img src="assets/img/usadba_new_5.png" alt="Вид усадьбы 5" class="carousel-slide" loading="lazy" />
           </div>
+
+          <!-- <div class="carousel-controls">
+            <button class="carousel-button prev" type="button" aria-label="Предыдущее фото">
+              <img src="assets/img/button-arrow.svg" alt="Стрелка" class="button-arrow-left" />
+            </button>
+            <button class="carousel-button next" type="button" aria-label="Следующее фото">
+              <img src="assets/img/button-arrow.svg" alt="Стрелка" class="button-arrow-right" />
+            </button>
+          </div> -->
         </div>
-        <!-- <div class="carousel-controls">
-          <button class="carousel-button prev" type="button">←</button>
-          <button class="carousel-button next" type="button">→</button>
-        </div> -->
       </div>
-      <button class="map-btn" onclick="">Маршрут до локации</button>
+        <a 
+          class="map-btn"
+          href="https://yandex.ru/maps/-/CPb8nX3~"
+          target="_blank"
+        >
+          Маршрут до локации
+        </a>
     </section>
 
     <section class="program-section">
